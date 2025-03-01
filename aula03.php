@@ -47,7 +47,7 @@
     //$imovel01->tipoImovel = "Residencial";
     //$imovel01->valor = 280.000;
     //$imovel01->metragem = 150;
-    //$imovel01->descricao= "Imóvel recém contruído";
+    //$imovel01->descricao= "Imóvel recém contruído"
 
     echo $imovel01->regiao;
     echo "\n";

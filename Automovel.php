@@ -76,7 +76,7 @@ $aut02->modelo = "Celta";
 $aut02->cor = "preto";
 $aut02->anoFab = "2002";
 $aut02->motor = 1.0;
-//$aut01->set_QtdePort(2)
+//$aut01->set_QtdePort(2
 //$aut02->qtdPorta = 2;
 $aut02->qtdPorta = "2";
 $aut02->renavan = "5458247163";
