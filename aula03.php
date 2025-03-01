@@ -26,6 +26,22 @@
         }
         
     }
+
+    //herança
+
+    class rural extends Imoveis{
+        //sobrecarga
+        
+        function __construct(){
+            
+        }
+        
+    }
+
+    $imovel02 = new rural();
+    
+
+
     $imovel01 = new Imoveis("Residencial", 280.000, "Zona Norte", 150, "Imóvel recém contruído" );
     //$imovel01->regiao = "Zona Norte";
     //$imovel01->tipoImovel = "Residencial";
