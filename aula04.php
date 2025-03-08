@@ -1,8 +1,14 @@
 <?php
 
     class Retangulo{
-        private $altura;
-        private $largura;
+        protected $altura;
+        protected $largura;
+
+        function __construct($altura,$largura){
+            $this->altura = $altura;
+            $this->largura = $largura;
+        }
+
 
         function __set($name, $value)
         {
@@ -25,12 +31,48 @@
 
     }
 
-    //objeto
-    $retangulo01 = new Retangulo();
-    $retangulo01->altura=5;
-    $retangulo01->largura=2;
-    echo ("altra {$retangulo01->altura} <br>");
-    echo ("altra {$retangulo01->largura} <br>");
+//herança
 
-    echo "Area {$retangulo01->getArea()} <br>";
-    echo "Area {$retangulo01->getPerimetro()} <br>";
+class Ret extends Retangulo{
+
+    function __construct(){
+        //
+        
+    }
+
+
+    //pra chamar precisa usar o self no lugar do parent
+    public function getArea(){
+        return $this->altura * $this->largura;
+    }
+
+    function CalcularCusto($valor){
+       return $valor * parent::getArea();
+    }
+
+
+} 
+
+
+
+
+
+ //objeto
+$retangulo01 = new Retangulo(10, 5);
+$retangulo01->altura=5;
+$retangulo01->largura=2;
+echo ("alutra {$retangulo01->altura} <br>");
+echo ("largura {$retangulo01->largura} <br>");
+echo "Area {$retangulo01->getArea()} <br>";
+echo "Perimetro {$retangulo01->getPerimetro()} <br>";
+
+
+//objeto da classe herdeira Ret
+$retangulo02Filha = new Ret();
+$retangulo02Filha->altura=35;
+$retangulo02Filha->largura=42;
+echo ("<br>");
+echo ("alutra {$retangulo02Filha->altura} <br>");
+echo ("largura {$retangulo02Filha->largura} <br>");
+echo "Area {$retangulo02Filha->getArea()} <br>";
+echo "Perimetro {$retangulo02Filha->getPerimetro()} <br>";
