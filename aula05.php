@@ -16,7 +16,5 @@ class Circle {
     }
 }
 
-$circle = new Circle(7);
-echo "Area: " . $circle->getArea() . "</br>";
-echo "Circumference: " . $circle->getCircumference() . "</br>";
+
 ?>
